@@ -1,8 +1,10 @@
 # Unfair Inequality in Education: A Benchmark for AI-Fairness Research
 
+This is the repository for the code and dataset of the paper intitled "Unfair Inequality in Education: A Benchmark for AI-Fairness Research" submitted to the DEMO track of the 27TH European Conference on Artificial Intelligence (ECAI).
+
 ## Abstract
 
-This repository proposes a novel benchmark specifically designed for AI fairness research in education.
+This paper proposes a novel benchmark specifically designed for AI fairness research in education.
 It can be used for challenging tasks aimed at improving students' performance and reducing dropout rates which are also discussed in the paper to emphasize significant research directions.
 By prioritizing fairness,  this benchmark aims to foster the development of bias-free AI solutions, promoting equal educational access and outcomes for all students.
 
@@ -10,18 +12,22 @@ By prioritizing fairness,  this benchmark aims to foster the development of bias
 
 ```benchmark```
 contains:
-- the proposed dataset (```dataset.csv```),
-- the mask for dealing with missing values (```missing_mask.csv```), and
-- the meta-columns providing grouping criteria and sample weights for each student (```meta_cols.csv```).
+- the proposed dataset (```dataset.csv```), and
+- the mask for dealing with missing values (```missing_mask.csv```).
+
+
+```examples```
+contains:
+- a preliminary analysis performed on the proposed dataset (```preliminary_analysis.csv```), and
+- the school performance prediction task addresed with and without balancing the class distribution (```performance_prediction_balanced.csv``` and ```performance_prediction.csv```, respectively).
 
 ```raw_data``` includes:
 - the original dataset (```original.csv```), and
-- the intermediate stages of the pre-processing and validation pipeline (```split```, ```pre_processed```, ```validation```).
+- the intermediate stages of the pre-processing pipeline (```split``` and ```pre_processed```).
 
 ```res``` contains the documentation, including:
-- the transformation mapping each column of the original dataset to the proposed one, along with missingness category and original text (```meta_data_mapping.csv```),
-- the value type and domains of each column of the proposed datasets (```meta_data_stats.json```), and
-- the statistical indices of the validation pipeline (```bias_preservation_results.json```).
+- the transformation mapping each column of the original dataset to the proposed one, along with missingness category and original text (```meta_data_mapping.csv```), and
+- the value type and domains of each column of the original, intermediate-stage, and proposed datasets (rispectively, ```meta_data_original.json``` and ```meta_data_merged.json``` and ```meta_data_final.json```).
 
 ```src``` contains the source code for running the pre-processing and corresponding analysis:
 - ```pre_processing``` and ```stats```contain the code for the two corresponding tasks, and
